@@ -1,11 +1,4 @@
-﻿
-var data = [
-  { id: 1, author: "Daniel Lo Nigro", text: "Hello ReactJS.NET World!" },
-  { id: 2, author: "Pete Hunt", text: "This is one comment" },
-  { id: 3, author: "Jordan Walke", text: "This is *another* comment" }
-];
-
-var CommentList = React.createClass({
+﻿var CommentList = React.createClass({
     render: function () {
         var commentNodes = this.props.data.map(function(comment) {
             return (
@@ -62,6 +55,6 @@ var CommentBox = React.createClass({
     }
 });
 ReactDOM.render(
-    <CommentBox data={data} />,
+    <CommentBox url="/comments" />,
     document.getElementById('content')
 );
